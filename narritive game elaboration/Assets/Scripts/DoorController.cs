@@ -55,11 +55,13 @@ public class DoorController : MonoBehaviour
 
             if(faceupordown == true && playerfaceup == true)
             {
-                Teleport();
+
+                GameManager.instance.Teleport(teleportX,teleportY);
+                // GameTeleport();
             }
             else if(faceupordown == false && playerfacedown == true)
             {
-                Teleport();
+                GameManager.instance.Teleport(teleportX, teleportY);
             }
 
 
@@ -72,8 +74,8 @@ public class DoorController : MonoBehaviour
         }
     }
 
-    void Teleport()
-    {
-        player.transform.position = new Vector3(teleportX,teleportY,0);
-    }
+    //void Teleport()
+    //{
+     //   player.transform.position = new Vector3(teleportX,teleportY,0);
+   // }
 }
